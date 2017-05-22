@@ -1,7 +1,7 @@
 {
-  "name": "generator-webpack-basic",
-  "version": "0.1.1",
-  "description": "A basic webpack generator using nyg",
+  "name": "generator-webpack-stackgl",
+  "version": "0.1.0",
+  "description": "A stack.gl webpack generator using nyg",
   "main": "index.js",
   "scripts": {
     "test": "node test/"
@@ -9,7 +9,8 @@
   "keywords": [
     "nyg",
     "generator",
-    "webpack"
+    "webpack",
+    "webgl"
   ],
   "author": "Andy Dayton <amdayton@gmail.com> (http://andydayton.com/)",
   "license": "ISC",
