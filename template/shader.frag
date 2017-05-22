@@ -8,10 +8,10 @@ uniform float	iFrame;
 uniform vec4 iMouse;
 
 // custom inputs
-uniform sampler2D tex0;
+uniform sampler2D iChannel0;
 
 varying vec2 texCoord;
 
 void main() {
-  gl_FragColor = texture2D(tex0, texCoord);
+  gl_FragColor = texture2D(iChannel0, texCoord);
 }

@@ -19,7 +19,7 @@ const shell = createShell();
 const image0 = new Image();
 
 let options = {
-  zoom: -3,
+  zoom: 3,
   planeWidth: 2,
   planeHeight: 1
 }
@@ -83,12 +83,12 @@ shell.on('gl-render', (t) => {
 
   let scratch = mat4.create();
   let projection = mat4.perspective(
-        scratch,
-        Math.PI/4.0,
-        shell.width/shell.height,
-        0.1,
-        1000.0
-      );
+    scratch,
+    Math.PI/4.0,
+    shell.width/shell.height,
+    0.1,
+    1000.0
+  );
 
 
   shader.bind();
@@ -104,7 +104,6 @@ shell.on('gl-render', (t) => {
   shader.uniforms.model = scratch;
   shader.uniforms.view = camera.view(scratch);
   shader.uniforms.projection = projection;
-
 
   if(tex0) {
     // texture uniform
