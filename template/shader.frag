@@ -6,8 +6,6 @@ uniform float	iGlobalTime;
 uniform float	iTimeDelta;
 uniform float	iFrame;
 uniform vec4 iMouse;
-
-// custom inputs
 uniform sampler2D iChannel0;
 
 varying vec2 texCoord;

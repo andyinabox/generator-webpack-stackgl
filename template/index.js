@@ -20,8 +20,8 @@ const image0 = new Image();
 
 let options = {
   zoom: 3,
-  planeWidth: 2,
-  planeHeight: 1
+  planeWidth: 1.5,
+  planeHeight: 2
 }
 
 // gl stuff
@@ -82,14 +82,6 @@ shell.on('gl-render', (t) => {
 	const gl = shell.gl;
 
   let scratch = mat4.create();
-  let projection = mat4.perspective(
-    scratch,
-    Math.PI/4.0,
-    shell.width/shell.height,
-    0.1,
-    1000.0
-  );
-
 
   shader.bind();
 
@@ -103,7 +95,14 @@ shell.on('gl-render', (t) => {
   // camera uniforms
   shader.uniforms.model = scratch;
   shader.uniforms.view = camera.view(scratch);
-  shader.uniforms.projection = projection;
+  shader.uniforms.projection = mat4.perspective(
+    scratch,
+    Math.PI/4.0,
+    shell.width/shell.height,
+    0.1,
+    1000.0
+  );
+
 
   if(tex0) {
     // texture uniform
